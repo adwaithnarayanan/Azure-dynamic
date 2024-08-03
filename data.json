@@ -1,0 +1,113 @@
+{
+  "nav": {
+    "microsoft-icon": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31",
+    "hamburger": "assets/icons/hamburger-menu-50.png",
+    "search-icon": "assets/icons/serach (1).png",
+    "name": "Azure",
+    "contextual-menu": [
+      "Explore",
+      "Products",
+      "Solutions",
+      "Pricing",
+      "Partners",
+      "Resources"
+    ],
+    "explore": [
+      "Get to know Azure",
+      "Global infrastructure",
+      "FinOps on Azure",
+      "Azure essentials",
+      "Customer stories",
+      "Azure innovation insights"
+    ],
+    "products": [
+      "View all products (200+)",
+      "Popular",
+      "AI + machine learning",
+      "Compute",
+      "Container"
+    ],
+    "products-items": [
+      [
+        "Popular",
+        "Azure Virtual Machines",
+        "Azure Virtual Desktop",
+        "Azure SQL",
+        "Microsoft Copilot in Azure PREVIEW",
+        "Azure AI Services",
+        "Azure AI Studio",
+        "Azure Cosmos DB",
+        "Azure Kubernetes Service (AKS)",
+        "Azure Arc",
+        "Azure Migrate"
+      ],
+      [
+        "AI + machine learning",
+        "Azure Machine Learning",
+        "Azure AI Services",
+        "Microsoft Copilot in Azure PREVIEW",
+        "Azure OpenAI Service",
+        "Azure AI Studio",
+        "Azure AI Vision",
+        "Azure AI Search",
+        "Azure AI Bot Service",
+        "Azure Databricks",
+        "Azure AI Language"
+      ],
+      [
+        "Compute",
+        "Azure Virtual Machines",
+        "Azure Kubernetes Service (AKS)",
+        "Linus virtual machines in Azure",
+        "SQL Server on Azure Virtual Machines",
+        "Windows Virtual Machines",
+        "Azure Functions",
+        "Azure App Service",
+        "Azure Virtual Machine Scale Sets",
+        "Azure Spot Virtual Machines",
+        "Azure Container Apps"
+      ],
+      [
+        "Containers",
+        "Azure Kubernetes Service (AKS)",
+        "Azure App Service",
+        "Azure Functions",
+        "Azure Container Instances",
+        "Azure Spring Apps",
+        "Azure Red Hat OpenShift",
+        "Azure Kubernets Fleet Manager PREVIEW",
+        "Azure Container Apps",
+        "Azure Container Registry",
+        "Azure Configuration"
+      ],
+      [
+        "Hybrid + multicloud",
+        "Azure Arc",
+        "Azure Stack",
+        "Microsoft Sentinel",
+        "Azure SQL",
+        "Microsoft Defender for Cloud",
+        "Azure ExpressRoute",
+        "Azure DevOps",
+        "Azure Database for PostgreSQL",
+        "Azure IoT Edge",
+        "Azure Monitor"
+      ],
+      [
+        "Analytics",
+        "Azure Synapse Analytics",
+        "Azure Databricks",
+        "Microsoft Purview",
+        "Azure Data Factory",
+        "Azure Machine Learning",
+        "Microsoft Fabric",
+        "HDInsight",
+        "Azure Data Explorer",
+        "Azure Data Lake Storage",
+        "Azure Operator Insights"
+      ]
+    ],
+    "nav-menu": ["Learn", "Support", "Contact Sales"],
+    "nav-button1": "Try Azure for free"
+  }
+}
