@@ -1,16 +1,32 @@
 {
   "nav": {
-    "microsoft-icon": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31",
+    "microsoftIcon": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31",
     "hamburger": "assets/icons/hamburger-menu-50.png",
-    "search-icon": "assets/icons/serach (1).png",
+    "hamburgerItems": [
+      "Microsoft 365",
+      "Teams",
+      "Copilot",
+      "Windows",
+      "Surface",
+      "Xbox",
+      "Deals",
+      "Small Busniness",
+      "Support",
+      "Software",
+      "PC & Devices",
+      "Business",
+      "Developer & IT",
+      "Other",
+      "View Sitemap"
+    ],
     "name": "Azure",
-    "contextual-menu": [
-      "Explore",
-      "Products",
-      "Solutions",
-      "Pricing",
-      "Partners",
-      "Resources"
+    "contextualMenu": [
+      "explore",
+      "products",
+      "solutions",
+      "pricing",
+      "partners",
+      "resources"
     ],
     "explore": [
       "Get to know Azure",
@@ -20,14 +36,8 @@
       "Customer stories",
       "Azure innovation insights"
     ],
+
     "products": [
-      "View all products (200+)",
-      "Popular",
-      "AI + machine learning",
-      "Compute",
-      "Container"
-    ],
-    "products-items": [
       [
         "Popular",
         "Azure Virtual Machines",
@@ -107,7 +117,49 @@
         "Azure Operator Insights"
       ]
     ],
-    "nav-menu": ["Learn", "Support", "Contact Sales"],
-    "nav-button1": "Try Azure for free"
+    "solutions": [
+      [
+        "Featured",
+        "Azure AI",
+        "Migrate to innovate in the era of AI",
+        "Build and modernize intelligent apps",
+        "Cloud-scale analytics",
+        "Azure AI Infrastructrue",
+        "Adaptive Cloud",
+        "Azure network security"
+      ],
+      [
+        "AI",
+        "Azure AI",
+        "Responsible AI with Azure",
+        "Azure AI infrastructure",
+        "Build and modernize intelligent apps",
+        "Knowledge mining",
+        "Hugging Face on Azure",
+        "Azure confidential computing"
+      ],
+      [
+        "Application developlemnt",
+        "Build and modernize intelligent apps",
+        "Develpment and testing",
+        "DevOps",
+        "DevSecOps",
+        "Serverless computing",
+        "Application and Data Modernization",
+        "Low-code application development on Azure"
+      ]
+    ],
+    "navMenu": [
+      "Learn",
+      "Support",
+      "Contact Sales",
+      "Get started with Azure",
+      "Sign in"
+    ]
+  },
+  "heroBanner": {
+    "neutralHighlight": "azure limitless innovation",
+    "blockHeading": "Is your infrastructure AI-ready?",
+    "blockPara": ""
   }
 }
