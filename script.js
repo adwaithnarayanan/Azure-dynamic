@@ -36,28 +36,28 @@ function createDropdownList(list) {
   return ulEl;
 }
 
-// function showMenuItems(e) {
-//   const value = e.target
-//     .closest('li')
-//     .querySelector('.contextualmenu-item')
-//     .textContent.toLowerCase()
-//     .trim();
+function calculatePosition(leftPosition, objectWidth) {
+  const vw = window.innerWidth;
 
-//   const divEl = document.createElement('div');
-//   divEl.classList.add('dropdown-contextualmenu');
+  const rightGap = (vw * 10) / 100;
+  // console.log(rightGap);
 
-//   if (Array.isArray(data.nav[value][0])) {
-//     data.nav[value].forEach((val) => {
-//       divEl.appendChild(createDropdownList(val));
-//     });
-//   } else divEl.appendChild(createDropdownList(data.nav[value]));
+  if (vw - objectWidth - leftPosition <= rightGap) {
+    leftPosition = leftPosition - 150;
+    // objectWidth = objectWidth - rightGap - 150;
+    objectWidth = (objectWidth * 95) / 100;
 
-//   document.querySelector('#dropdown-container').appendChild(divEl);
-// }
+    if (objectWidth + leftPosition >= vw) {
+      leftPosition -= 20;
+      objectWidth = (objectWidth * 83) / 100;
+    }
+    return { leftPosition, objectWidth };
+  }
+  return { leftPosition, objectWidth };
+}
 
 function showMenuItems(e) {
   if (document.querySelector('.dropdown-body')) {
-    console.log(1234);
     document.querySelector('.dropdown-body').remove();
   }
   const value = e.target
@@ -66,17 +66,24 @@ function showMenuItems(e) {
     .textContent.toLowerCase()
     .trim();
 
+  console.log();
+  const parentPosition = e.target.closest('li').getBoundingClientRect().x;
+
   const divEl = document.createElement('div');
+
   divEl.classList.add('dropdown-contextualmenu');
 
   if (Array.isArray(data.nav[value][0])) {
     data.nav[value].forEach((val) => {
-      divEl.appendChild(createDropdownList(val));
+      const liItem = createDropdownList(val);
+      liItem.querySelector('li').classList.add('list-heading');
+      divEl.appendChild(liItem);
     });
   } else divEl.appendChild(createDropdownList(data.nav[value]));
 
   const dropdownBody = document.createElement('div');
   dropdownBody.classList.add('dropdown-body');
+
   dropdownBody.appendChild(divEl);
 
   dropdownBody.addEventListener('click', (e) => {
@@ -86,6 +93,13 @@ function showMenuItems(e) {
   });
 
   document.querySelector('#dropdown-container').appendChild(dropdownBody);
+  const { leftPosition, objectWidth } = calculatePosition(
+    parentPosition,
+    divEl.getBoundingClientRect().width
+  );
+
+  divEl.style.left = `${leftPosition}px`;
+  divEl.style.width = `${objectWidth}px`;
 }
 
 function capitalization(text) {
