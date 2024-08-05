@@ -147,7 +147,84 @@
         "Serverless computing",
         "Application and Data Modernization",
         "Low-code application development on Azure"
+      ],
+      [
+        "Featured",
+        "Azure AI",
+        "Migrate to innovate in the era of AI",
+        "Build and modernize intelligent apps",
+        "Cloud-scale analytics",
+        "Azure AI Infrastructrue",
+        "Adaptive Cloud",
+        "Azure network security"
+      ],
+      [
+        "AI",
+        "Azure AI",
+        "Responsible AI with Azure",
+        "Azure AI infrastructure",
+        "Build and modernize intelligent apps",
+        "Knowledge mining",
+        "Hugging Face on Azure",
+        "Azure confidential computing"
+      ],
+      [
+        "Application developlemnt",
+        "Build and modernize intelligent apps",
+        "Develpment and testing",
+        "DevOps",
+        "DevSecOps",
+        "Serverless computing",
+        "Application and Data Modernization",
+        "Low-code application development on Azure"
       ]
+    ],
+    "pricing": [
+      [
+        "How to buy",
+        "Azure pricing",
+        "Free Azure services",
+        "Azure account",
+        "Flexible purchase options",
+        "Azure benefits and incentives"
+      ],
+      [
+        "Pricing tools and resources",
+        "Pricing calculator",
+        "TCO calculator",
+        "Optimize your costs",
+        "FinOps on Azure"
+      ]
+    ],
+    "partners": [
+      ["Find a partner", "Azure Marketplace", "Find a partner"],
+      [
+        "Become a partner",
+        "Azure Partner Zone",
+        "Azure techonolgy partners",
+        "Join ISV Success"
+      ]
+    ],
+    "resources": [
+      [
+        "Learning",
+        "Get started with Azure",
+        "Training and certifications",
+        "Customer stories",
+        "Analyst reports, white papers, and e-books",
+        "Videos",
+        "Learn more about cloud computing"
+      ],
+      [
+        "Technical resources",
+        "Documentation",
+        "Get the Azure mobile app",
+        "Developer resources",
+        "Quickstart templates",
+        "Resources for startups"
+      ],
+      ["Community", "Developer Community", "Students", "Developer stories"],
+      ["What's new", "Blog", "Events and Webinars"]
     ],
     "navMenu": [
       "Learn",

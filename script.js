@@ -25,16 +25,67 @@ function createListItem(item) {
   return li;
 }
 
+function createDropdownList(list) {
+  const ulEl = document.createElement('ul');
+  ulEl.classList.add('dropdown-items');
+
+  list.forEach((li) => {
+    ulEl.appendChild(createListItem(li));
+  });
+
+  return ulEl;
+}
+
+// function showMenuItems(e) {
+//   const value = e.target
+//     .closest('li')
+//     .querySelector('.contextualmenu-item')
+//     .textContent.toLowerCase()
+//     .trim();
+
+//   const divEl = document.createElement('div');
+//   divEl.classList.add('dropdown-contextualmenu');
+
+//   if (Array.isArray(data.nav[value][0])) {
+//     data.nav[value].forEach((val) => {
+//       divEl.appendChild(createDropdownList(val));
+//     });
+//   } else divEl.appendChild(createDropdownList(data.nav[value]));
+
+//   document.querySelector('#dropdown-container').appendChild(divEl);
+// }
+
 function showMenuItems(e) {
-  // console.log();
+  if (document.querySelector('.dropdown-body')) {
+    console.log(1234);
+    document.querySelector('.dropdown-body').remove();
+  }
   const value = e.target
     .closest('li')
     .querySelector('.contextualmenu-item')
-    .textContent.toLowerCase();
+    .textContent.toLowerCase()
+    .trim();
 
-  // console.log(value);
+  const divEl = document.createElement('div');
+  divEl.classList.add('dropdown-contextualmenu');
 
-  console.log(data.nav.value.toString());
+  if (Array.isArray(data.nav[value][0])) {
+    data.nav[value].forEach((val) => {
+      divEl.appendChild(createDropdownList(val));
+    });
+  } else divEl.appendChild(createDropdownList(data.nav[value]));
+
+  const dropdownBody = document.createElement('div');
+  dropdownBody.classList.add('dropdown-body');
+  dropdownBody.appendChild(divEl);
+
+  dropdownBody.addEventListener('click', (e) => {
+    if (e.target.classList.contains('dropdown-body')) {
+      dropdownBody.remove();
+    }
+  });
+
+  document.querySelector('#dropdown-container').appendChild(dropdownBody);
 }
 
 function capitalization(text) {
@@ -43,35 +94,21 @@ function capitalization(text) {
 
 function createContextualMenu(items) {
   for (let i = items.length - 1; i >= 0; i--) {
-    // const menuItem = document.createElement('li');
-    // const spanEl = document.createElement('span');
-    // spanEl.classList.add('contextualmenu-item');
-    // spanEl.textContent = `${items[i][0].toUpperCase() + items[i].slice(1)}`;
-    // const spanEl2 = document.createElement('span');
-    // spanEl2.classList.add('down-arrow');
-    // menuItem.appendChild(spanEl);
-    // menuItem.appendChild(spanEl2);
-
     const menuItem = `
       <li>
-        <span class="contextualmenu-item">${capitalization(items[i])} </span>
+        <span class="contextualmenu-item" data-value="${i}">${capitalization(
+      items[i]
+    )} </span>
         <span class="down-arrow"> </span>
       </li>
     `;
 
-    // console.log(menuItem);
-
-    // contextualMenuEl.appendChild('afterbegin', menuItem);
-
     contextualMenuEl.insertAdjacentHTML('afterbegin', menuItem);
   }
 
-  // Add eventListener for contextual menu list items
   contextualMenuEl.querySelectorAll('li').forEach((item) => {
     item.addEventListener('click', showMenuItems);
   });
-
-  console.log();
 }
 
 function screenChange() {
@@ -133,6 +170,7 @@ async function getData() {
   navBar(data.nav);
 }
 
+// INITIAL CALL
 getData();
 screenChange();
 
@@ -195,8 +233,6 @@ searchDesktop.addEventListener('click', (e) => {
     }
   } else if (e.target.id !== 'search') {
     e.target.parentNode.classList.add('active');
-    console.log(1234);
-    console.log(e.target.id);
     if (window.innerWidth >= 1400) {
       searchDesktop
         .querySelector('.header-ms-min-1400-search-text')
