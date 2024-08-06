@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="assets/icons/microsoft-logo.ico" />
 
-    <script src="script.js" defer></script>
+    <script src="assets/js/script.js" type="module" defer></script>
   </head>
   <body>
     <header>
@@ -138,44 +138,27 @@
       <div class="main1-container bx">
         <div class="main1-inner-section bx">
           <div class="main1-contents bx">
-            <div class="video-container bx">
-              <video autoplay muted>
+            <div id="background" class="background-container bx">
+              <!-- <video class="background-item" autoplay muted>
                 <source src="assets/videos/main-video.mp4" type="video/mp4" />
-              </video>
+              </video> -->
               <div class="main1-text-contents cb">
                 <div class="main1-text-area cb">
                   <div class="main1-textbox row1 bx">
-                    <span class="main1-row1 main1-text1">
-                      AZURE. LIMITLESS INNOVATION.
+                    <span class="main1-row1 main1-text1" id="neutral-highlight">
                     </span>
                   </div>
                   <div class="main1-textbox row2 bx">
-                    <span class="main1-row1 main1-text2">
-                      The future of AI starts here
+                    <span class="main1-row1 main1-text2" id="block-heading">
                     </span>
                   </div>
                   <div class="main1-textbox main1-description-content bx">
-                    <span class="main1-row1 main1-description">
-                      Envision your next great AI app with the latest
-                      technologies announced at Microsoft Build. Get started
-                      with Azure now with pay-as-you-go pricing. There's no
-                      upfront commitment—cancel anytime. Or try Azure free for
-                      up to 30 days.
+                    <span class="main1-row1 main1-description" id="block-para">
                     </span>
                   </div>
                   <div class="main1-textbox main1-buttons bx">
-                    <div class="main1-button">
-                      <button class="get-started">
-                        <span class="get-started-text"> Get started </span>
-                      </button>
-                    </div>
-                    <div class="main1-button">
-                      <button class="try-free">
-                        <span class="get-started-text">
-                          Try Azure for free
-                        </span>
-                      </button>
-                    </div>
+                    <div class="hero-banner-btn"></div>
+                    <div class="hero-banner-btn"></div>
                   </div>
                 </div>
                 <div class="main1-text-area2"></div>
@@ -196,7 +179,7 @@
                   <span class="section1-ms-max-860-dropdown-text bx">
                     Featured news
                   </span>
-                  <span class="section1-arrow"> &#9013; </span>
+                  <span class="section1-arrow">&#9013;</span>
                 </div>
               </div>
             </div>

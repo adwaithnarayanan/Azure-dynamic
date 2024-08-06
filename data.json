@@ -235,8 +235,19 @@
     ]
   },
   "heroBanner": {
-    "neutralHighlight": "azure limitless innovation",
+    "background": {
+      "type": "video",
+      "attributes": ["autoplay", "muted"],
+      "src": "assets/videos/main-video.mp4"
+    },
+    "background2": {
+      "type": "image",
+      "attributes": [],
+      "src": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-hero-BG?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=3200&hei=1264&qlt=100&fit=constrain"
+    },
+    "neutralHighlight": "AZURE. LIMITLESS INNOVATION",
     "blockHeading": "The future of AI starts here",
-    "blockPara": "Envision your next great AI app with the latest technologies announced at Microsoft Build. Get started with Azure now with pay-as-you-go pricing. There's no upfront commitment—cancel anytime. Or try Azure free for up to 30 days"
+    "blockPara": "Envision your next great AI app with the latest technologies announced at Microsoft Build. Get started with Azure now with pay-as-you-go pricing. There's no upfront commitment—cancel anytime. Or try Azure free for up to 30 days.",
+    "buttons": ["Get started", "Try Azure for free"]
   }
 }
