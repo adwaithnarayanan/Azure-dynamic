@@ -169,30 +169,30 @@
       </div>
     </main>
 
-    <section id="section-1" class="bx">
+    <footer id="section-1" class="bx">
       <div class="section1-container bx">
         <div class="section1-inner-container bx">
           <div class="section1-ms-max-860-container bx">
-            <div class="section1-ms-max-860-inner-container bx">
+            <div
+              class="section1-ms-max-860-inner-container bx"
+              id="sticky-nav-parent"
+            >
               <div class="section1-ms-max-860-contents bx">
-                <div class="section1-ms-max-860-dropdown-text-box bx">
-                  <span class="section1-ms-max-860-dropdown-text bx">
-                    Featured news
-                  </span>
-                  <span class="section1-arrow">&#9013;</span>
-                </div>
+                <ul class="sticky-nav bx">
+                  <span class="section-dropdown-content"> </span>
+                  <span class="sticky-nav-arrow"></span>
+                </ul>
               </div>
             </div>
+            <ul class="section-dropdown-menu hide"></ul>
           </div>
 
           <div class="section1-ms-min-860-container bx">
             <div class="section1-ms-min-860-inner-container bx">
               <div class="section1-ms-min-860-contents bx">
-                <ul class="section1-ms-min-860-items bx">
+                <!-- <ul class="section1-ms-min-860-items bx">
                   <li class="bx">
-                    <span
-                      class="section1-ms-min-860-list-text section1-first-child"
-                    >
+                    <span class="section1-ms-min-860-list-text active-section">
                       Featured news
                     </span>
                   </li>
@@ -216,7 +216,7 @@
                       Customer stories
                     </span>
                   </li>
-                </ul>
+                </ul> -->
               </div>
             </div>
           </div>
@@ -228,25 +228,19 @@
           </div>
         </div>
       </div>
-    </section>
+    </footer>
 
-    <section id="marble-section">
+    <section id="featured">
       <div class="marble-section-container bx">
         <div class="marble-section-inner-container bx">
           <div class="marble-section-contents bx">
             <div class="marble-section-text-area bx">
-              <div class="section-main-heading bx">
-                <span class="section-main-text bx"> FEATURED NEWS </span>
-              </div>
-              <div class="section-sub-heading bx">
-                <span class="section-sub-text bx">
-                  Discover what′s happening on Azure
-                </span>
-              </div>
+              <div class="section-main-heading bx"></div>
+              <div class="section-sub-heading bx"></div>
             </div>
             <div class="marble-section-marble-area bx">
-              <div class="marble-section-marbles bx">
-                <div class="marble bx">
+              <div class="marble-section-marbles bx" id="featured-marbles">
+                <!-- <div class="marble bx">
                   <div class="inner-marble bx">
                     <div class="marble-image bx">
                       <img src="assets/pictures/picture1.avif" alt="" />
@@ -276,69 +270,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
-
-                <div class="marble bx">
-                  <div class="inner-marble bx">
-                    <div class="marble-image bx">
-                      <img src="assets/pictures/pic2-marble.avif" alt="" />
-                    </div>
-                    <div class="marble-text-contents mtc2 bx">
-                      <div class="marble-text-items bx">
-                        <div class="marble-heading bx">
-                          <span class="marble-heading-text bx">
-                            Discover new ways to innovate with AI
-                          </span>
-                        </div>
-                        <div class="marble-description bx">
-                          <span class="marble-description-text bx">
-                            Explore Azure AI announcements and learn about Azure
-                            AI Studio, a unified platform for building
-                            generative Ai solutions.
-                          </span>
-                        </div>
-                      </div>
-                      <div class="marble-explore-more-area">
-                        <span class="explore-more-icon-parent">
-                          <img src="assets/icons/icons8-arrow-100.png" alt="" />
-                        </span>
-                        <span class="explore-more-text bx"> Learn more </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="marble bx">
-                  <div class="inner-marble bx">
-                    <div class="marble-image bx bx">
-                      <img src="assets/pictures/pic3-marble.avif" alt="" />
-                    </div>
-                    <div class="marble-text-contents mtc3 bx">
-                      <div class="marble-text-items bx">
-                        <div class="marble-heading bx">
-                          <span class="marble-heading-text bx">
-                            Power AI solutions at scale
-                          </span>
-                        </div>
-                        <div class="marble-description bx">
-                          <span class="marble-description-text bx">
-                            Take full advantage of the cloud and develop AI apps
-                            faster and more efficiently with infrastructure
-                            purpose-built for AI.
-                          </span>
-                        </div>
-                      </div>
-                      <div class="marble-explore-more-area">
-                        <span class="explore-more-icon-parent">
-                          <img src="assets/icons/icons8-arrow-100.png" alt="" />
-                        </span>
-                        <span class="explore-more-text bx">
-                          Read the blog
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -346,7 +278,7 @@
       </div>
     </section>
 
-    <section id="solutions-section">
+    <section id="solutions">
       <div class="solutions-section-container bx marble-section-container">
         <div
           class="solutions-section-inner-container bx marble-section-inner-container"
@@ -355,14 +287,9 @@
             <div
               class="solutions-section-text-area bx marble-section-text-area"
             >
-              <div class="section-main-heading bx">
-                <span class="section-main-text bx"> SOLUTIONS </span>
-              </div>
+              <div class="section-main-heading bx"></div>
               <div class="section-sub-heading bx">
-                <span class="section-sub-text bx">
-                  Find solutions for putting your ideas into action
-                </span>
-                <span class="content-box-sample"> </span>
+                <!-- <span class="content-box-sample"> </span> -->
               </div>
             </div>
 
@@ -376,7 +303,7 @@
                       <ul class="solution-section-slidebar-list-items">
                         <li>
                           <div
-                            class="solution-slidebar-item solutions-list-first-child"
+                            class="solution-slidebar-item solutions-tab-active"
                           >
                             <span class="solution-slidebar-text">
                               Featured solutions
@@ -538,23 +465,15 @@
       </div>
     </section>
 
-    <section id="products-section">
+    <section id="products">
       <div class="products-section-container bx marble-section-container">
         <div
           class="products-section-inner-container bx marble-section-inner-container"
         >
           <div class="products-section-contents bx marble-section-contents">
             <div class="products-section-text-area bx marble-section-text-area">
-              <div class="section-main-heading bx">
-                <span class="section-main-text bx">
-                  PRODUCTS AND SERVICES
-                </span>
-              </div>
-              <div class="section-sub-heading bx">
-                <span class="section-sub-text bx">
-                  Explore tools for bringing your vision to life
-                </span>
-              </div>
+              <div class="section-main-heading bx"></div>
+              <div class="section-sub-heading bx"></div>
             </div>
 
             <div
@@ -930,7 +849,7 @@
       </div>
     </section>
 
-    <section id="resources-section">
+    <section id="resources">
       <div class="resources-section-container bx marble-section-container">
         <div
           class="resources-section-inner-container bx marble-section-inner-container"
@@ -939,14 +858,8 @@
             <div
               class="resources-section-text-area bx marble-section-text-area"
             >
-              <div class="section-main-heading bx">
-                <span class="section-main-text bx"> RESOURCES BY ROLE </span>
-              </div>
-              <div class="section-sub-heading bx">
-                <span class="section-sub-text bx">
-                  Transform the way you work
-                </span>
-              </div>
+              <div class="section-main-heading bx"></div>
+              <div class="section-sub-heading bx"></div>
             </div>
 
             <div
@@ -1084,21 +997,15 @@
       </div>
     </section>
 
-    <section id="customer-section">
+    <section id="customer">
       <div class="customer-section-container bx marble-section-container">
         <div
           class="customer-section-inner-container bx marble-section-inner-container"
         >
           <div class="customer-section-contents bx marble-section-contents">
             <div class="customer-section-text-area bx marble-section-text-area">
-              <div class="section-main-heading bx">
-                <span class="section-main-text bx"> CUSTOMER STORIES </span>
-              </div>
-              <div class="section-sub-heading bx">
-                <span class="section-sub-text bx">
-                  See how customers are innovating with Azure
-                </span>
-              </div>
+              <div class="section-main-heading bx"></div>
+              <div class="section-sub-heading bx"></div>
             </div>
 
             <div class="customer-section-marble-area bx">
@@ -1555,7 +1462,7 @@
       </div>
     </section>
 
-    <section id="next-step-section">
+    <div id="next-step-section">
       <div class="marble-section-container bx">
         <div class="marble-section-inner-container bx">
           <div class="marble-section-contents bx">
@@ -1649,9 +1556,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section id="footer-section">
+    <footer id="footer-section">
       <div class="footer-container bx">
         <div class="footer-section-inner-container bx">
           <div class="footer-top-section bx">
@@ -2110,7 +2017,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </footer>
 
     <div class="sticky-button">
       <button>

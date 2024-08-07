@@ -249,5 +249,193 @@
     "blockHeading": "The future of AI starts here",
     "blockPara": "Envision your next great AI app with the latest technologies announced at Microsoft Build. Get started with Azure now with pay-as-you-go pricing. There's no upfront commitment—cancel anytime. Or try Azure free for up to 30 days.",
     "buttons": ["Get started", "Try Azure for free"]
+  },
+  "sections": {
+    "featured": {
+      "id": "featured",
+      "title": "Featured News",
+      "blockHeading": "Discover what's happening on Azure",
+      "cards": [
+        {
+          "media": "assets/pictures/picture1.avif",
+          "title": "Join us Microsoft Build",
+          "para": "Discover exclusive insights, expand your skillset, and grow your network at Microsoft Build—join live in person or online, or watch on demand",
+          "more": "Explore Microsoft Build"
+        },
+        {
+          "media": "assets/pictures/pic2-marble.avif",
+          "title": "Discover new ways to innovate with AI",
+          "para": "Explore Azure AI announcements and learn about Azure AI Studio, a unified platform for building generative AI solutions",
+          "more": "Learn more"
+        },
+        {
+          "media": "assets/pictures/pic3-marble.avif",
+          "title": "Power AI solutions at scale",
+          "para": "Take full advantage of the cloud and develop AI apps faster and more efficiently with infrastructure purpose-built for AI.",
+          "more": "Read the blog"
+        }
+      ]
+    },
+    "solutions": {
+      "id": "solution",
+      "title": "Solutions",
+      "blockHeading": "Find solutions for putting your ideas into action",
+      "tabWindow": [
+        {
+          "featuredSolutions": {
+            "id": "featuredSolutions",
+            "tabTitle": "Featured solutions",
+            "tabItems": [
+              {
+                "heading": "AI",
+                "para": "Build intelligent apps at enterprise scale with the Azure AI portfolio",
+                "more": "Explore Azure AI solutions",
+                "media": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-solutions-tab1-img1@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1312&hei=984&qlt=100&fmt=png-alpha&fit=crop"
+              },
+              {
+                "heading": "Build and modernize intelligent apps",
+                "para": "Build AI-powered, intelligent apps and enhance your critical solutions with generative AI",
+                "more": "Learn more",
+                "media": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-solutions-tab1-img2@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1312&hei=984&qlt=100&fmt=png-alpha&fit=crop"
+              },
+              {
+                "heading": "DevOps",
+                "para": "Bring together people, processes, and products to continously deliver value to customers and coworkers.",
+                "more": "Explore DevOps solutions",
+                "media": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-solutions-tab1-img3@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1312&hei=984&qlt=100&fmt=png-alpha&fit=crop"
+              },
+              {
+                "heading": "DevSecOps",
+                "para": "Embed security in your develpoer workflow and boost collaboration  between developers, security practitioners, and IT pros.",
+                "more": "See DevSecOps solutions",
+                "media": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-solutions-tab1-img4@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1312&hei=984&qlt=100&fmt=png-alpha&fit=crop"
+              },
+              {
+                "heading": "Machine learning operations",
+                "para": "Streamline the development and deployment of machine learning models and AI workflows",
+                "more": "Learn more",
+                "media": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-solutions-tab1-img5@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1312&hei=984&qlt=100&fit=crop"
+              }
+            ]
+          },
+          "cloudMigration": {
+            "id": "cloudMigration",
+            "tabTitle": "Cloud migration",
+            "tabItems": [
+              {
+                "heading": "Migrate to innovate",
+                "para": "Get AI-ready by securely migrating Windows Server, SQL Server, and Linux to Azure",
+                "more": "Learn more",
+                "media": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-solutions-tab2-img1@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1312&hei=984&qlt=100&fit=crop"
+              },
+              {
+                "heading": "Linux on Azure",
+                "para": "Run and manage applications your way with your preferred Linux distribution on Azure.",
+                "more": "Learn more about Linux on Azure"
+              },
+              {
+                "heading": "SAP on the Microsoft Cloud",
+                "para": "Extend your SAP applications and innovate in the cloud trusted by SAP.",
+                "more": "Explore SAP solutions",
+                "media": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-solutions-tab2-img2@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1312&hei=984&qlt=100&fit=crop"
+              },
+              {
+                "heading": "Oracle on Azure",
+                "para": "Migrate Oracle workloads and innovate with Azure services.",
+                "more": "Discover Oracle solutions",
+                "media": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-solutions-tab2-img3@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1312&hei=984&qlt=100&fit=crop"
+              },
+              {
+                "heading": "High-performance computing",
+                "para": "Access computing, networking, and storage resources for HPC workloads",
+                "more": "See HPC solutions",
+                "media": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-solutions-tab2-img5@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1312&hei=984&qlt=100&fit=crop"
+              }
+            ]
+          },
+          "dataTransformation": {
+            "id": "dataTransformation",
+            "tabTitle": "Data transformation",
+            "tabItems": [
+              {
+                "heading": "AI",
+                "para": "Build intelligent apps at enterprise scale with the Azure AI portfolio",
+                "more": "Explore Azure AI solutions",
+                "media": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-solutions-tab1-img1@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1312&hei=984&qlt=100&fmt=png-alpha&fit=crop"
+              },
+              {
+                "heading": "Build and modernize intelligent apps",
+                "para": "Build AI-powered, intelligent apps and enhance your critical solutions with generative AI",
+                "more": "Learn more",
+                "media": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-solutions-tab1-img2@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1312&hei=984&qlt=100&fmt=png-alpha&fit=crop"
+              },
+              {
+                "heading": "DevOps",
+                "para": "Bring together people, processes, and products to continously deliver value to customers and coworkers.",
+                "more": "Explore DevOps solutions",
+                "media": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-solutions-tab1-img3@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1312&hei=984&qlt=100&fmt=png-alpha&fit=crop"
+              }
+            ]
+          },
+          "appDevelopment": {
+            "id": "appDevelopment",
+            "tabTitle": "App development",
+            "tabItems": [
+              {
+                "heading": "AI",
+                "para": "Build intelligent apps at enterprise scale with the Azure AI portfolio",
+                "more": "Explore Azure AI solutions",
+                "media": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-solutions-tab1-img1@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1312&hei=984&qlt=100&fmt=png-alpha&fit=crop"
+              },
+              {
+                "heading": "Build and modernize intelligent apps",
+                "para": "Build AI-powered, intelligent apps and enhance your critical solutions with generative AI",
+                "more": "Learn more",
+                "media": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-solutions-tab1-img2@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1312&hei=984&qlt=100&fmt=png-alpha&fit=crop"
+              },
+              {
+                "heading": "DevOps",
+                "para": "Bring together people, processes, and products to continously deliver value to customers and coworkers.",
+                "more": "Explore DevOps solutions",
+                "media": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-solutions-tab1-img3@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1312&hei=984&qlt=100&fmt=png-alpha&fit=crop"
+              }
+            ]
+          },
+          "ai": {
+            "id": "ai",
+            "tabTitle": "AI",
+            "tabItems": [
+              {
+                "heading": "AI",
+                "para": "Build intelligent apps at enterprise scale with the Azure AI portfolio",
+                "more": "Explore Azure AI solutions",
+                "media": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-solutions-tab1-img1@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1312&hei=984&qlt=100&fmt=png-alpha&fit=crop"
+              },
+              {
+                "heading": "Build and modernize intelligent apps",
+                "para": "Build AI-powered, intelligent apps and enhance your critical solutions with generative AI",
+                "more": "Learn more",
+                "media": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-solutions-tab1-img2@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1312&hei=984&qlt=100&fmt=png-alpha&fit=crop"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "products": {
+      "id": "products",
+      "title": "Products and Services",
+      "blockHeading": "Explore tools for bringing your vision to life"
+    },
+    "resources": {
+      "id": "resources",
+      "title": "Resources by role",
+      "blockHeading": "Trasform the way you work"
+    },
+    "customer": {
+      "id": "customer",
+      "title": "Customer stories",
+      "blockHeading": "See how customers are innovating with Azure"
+    }
   }
 }
