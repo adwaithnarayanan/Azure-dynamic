@@ -30,7 +30,6 @@ class SectionView {
             </div>
             <div class="marble-explore-more-area">
             <span class="explore-more-icon-parent">
-                <img src="assets/icons/icons8-arrow-100.png" alt="" />
             </span>
             <span class="explore-more-text bx">
                 ${data.more}
@@ -48,6 +47,7 @@ class SectionView {
     const spanTitle = document.createElement('span');
     spanTitle.classList.add('section-main-text');
     spanTitle.textContent = item.title.toUpperCase();
+
     this._sectionTitle[idx].appendChild(spanTitle);
 
     const spanBlockHeading = document.createElement('span');
@@ -65,6 +65,7 @@ class SectionView {
 
   render(data) {
     this._data = data;
+
     Object.keys(this._data).forEach((key, idx) => {
       this._createSectionMarkup(this._data[key], idx);
     });

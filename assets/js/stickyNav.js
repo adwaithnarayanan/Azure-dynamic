@@ -34,7 +34,6 @@ class StickyNav {
     items.forEach((item) => {
       const index = item.href.indexOf('#') + 1;
       if (active === item.href.slice(index)) {
-        console.log(active);
         this._removeActiveClass(items);
         document.querySelector('.section-dropdown-content').textContent =
           this._data[active].title;

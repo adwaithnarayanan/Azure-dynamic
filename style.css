@@ -774,9 +774,13 @@ header {
 
 .marble-heading-text {
   font-weight: 600;
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  letter-spacing: -0.03em;
+  line-height: 24px;
+  font-size: 16px;
+  letter-spacing: -0.48px;
+}
+
+.marble-heading-text sup {
+  font-size: 12px;
 }
 
 .marble-description {
@@ -814,9 +818,9 @@ header {
   width: 14px;
 }
 
-.explore-more-icon-parent img {
-  width: 14px;
-  height: 14px;
+.explore-more-icon-parent::before {
+  font-family: MWF-FLUENT-ICONS;
+  content: '';
 }
 
 .explore-more-text {
@@ -850,6 +854,8 @@ header {
 
 .solution-section-slidebar-list-items {
   display: flex;
+  padding-right: 40px;
+  width: fit-content;
 }
 
 .solution-section-slidebar-list-items li {
@@ -865,6 +871,15 @@ header {
   letter-spacing: -0.05em;
   border: none;
   font-family: inherit;
+  cursor: pointer;
+}
+
+.solution-slidebar-item:hover {
+  background-color: rgba(0, 81, 151, 0.2);
+}
+
+.active-tab:hover {
+  background-color: #005597;
 }
 
 .solution-slidebar-text {
@@ -872,7 +887,7 @@ header {
   text-decoration: none;
 }
 
-.solutions-tab-active {
+.active-tab {
   color: white;
   background-color: #005597;
 }
@@ -930,12 +945,22 @@ header {
   justify-content: space-between;
 }
 
-.solutions-content-details-arrow img {
-  width: 16px;
-  height: 16px;
+.solutions-content-details-arrow::before {
+  font-family: MWF-FLUENT-ICONS;
+  content: '';
+  font-size: 1rem;
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  line-height: 1.5625rem;
+
+  /* width: 16px;
+  height: 16px; */
 }
 
-.first-with-exception img {
+.active-tab-item .solutions-content-details-arrow {
+  transform: rotateZ(180deg) !important;
+}
+
+.active-tab-item img {
   width: 14px;
   height: 14px;
 }
@@ -954,10 +979,6 @@ header {
   letter-spacing: -0.03em;
 }
 
-.first-with-exception .solutions-content-details-text-arrow {
-  padding-top: 0px;
-}
-
 .solutions-content-description-text {
   font-weight: 400;
   font-size: 1rem;
@@ -966,6 +987,7 @@ header {
 }
 
 .solutions-content-details-list-item1 {
+  display: flex;
   margin-bottom: 1.5rem;
 }
 
@@ -990,6 +1012,7 @@ header {
 }
 
 .solution-content-details-image-section {
+  display: flex;
   padding-bottom: 1.5rem;
 }
 
@@ -1021,6 +1044,14 @@ header {
   display: none;
 }
 
+.solutions-content-details-list .items {
+  display: none;
+}
+
+.active-tab-item .items {
+  display: flex;
+}
+
 /* -------------------------- Products section -------------------------- */
 #products {
   width: 100%;
@@ -1047,11 +1078,13 @@ header {
 
 .products-content-phi-box {
   height: 100%;
-  background-image: url(assets/pictures/ACOM-HP-Desktop-ENUS-Product-PromoCard-Phi3-Overlay@2x.avif);
+  /* background-image: url(assets/pictures/ACOM-HP-Desktop-ENUS-Product-PromoCard-Phi3-Overlay@2x.avif); */
   border-radius: 1rem;
   overflow: hidden;
   background-position: center;
   background-size: cover;
+  box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12),
+    0 0.125rem 0.25rem;
 }
 
 .products-content-marbles {
@@ -1060,15 +1093,11 @@ header {
 
 .products-content-phi-inner-box {
   padding: 1rem;
-  color: #ffffff;
+  /* color: #ffffff; */
   width: 100%;
   height: 100%;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.8839907192575406) 17%,
-    rgba(242, 242, 242, 0) 94%
-  );
+  /* background: rgb(0, 0, 0); */
+  /* background: linear-gradient(180deg,rgba(0, 0, 0, 0.8839907192575406) 17%, rgba(242, 242, 242, 0) 94%); */
   display: flex;
 }
 .products-content-phi-text-area {
@@ -1091,11 +1120,12 @@ header {
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: -0.03em;
-  color: #dceef8;
+  /* color: #dceef8; */
 }
 .products-phi-box-button button {
-  background-color: #b3daf0;
-  color: #0e1726;
+  /* background-color: #b3daf0; */
+  background-color: rgb(0, 120, 212);
+  color: #fff;
   font-family: var(--font-family-SegoeUI-60000);
   font-weight: 600;
   font-size: 0.937rem;
@@ -1110,6 +1140,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 0.89rem;
+  box-sizing: border-box;
 }
 .marble-icon {
   width: 48px;
@@ -1209,7 +1240,7 @@ header {
   background-color: #f5fafd;
 }
 .resources-section-container {
-  background-image: url(assets/pictures/resources-background_mobile@2x.avif);
+  /* background-image: url(assets/pictures/resources-background_mobile@2x.avif); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 100px;
@@ -1243,13 +1274,14 @@ header {
   height: 52px;
   background-color: #ffffff;
   border-right: 1px solid rgb(228, 228, 228);
+  cursor: pointer;
 }
 .resources-slidebar-item {
   height: 100%;
   width: 100%;
   padding: 12px 16px 16px;
 }
-.resources-first-child {
+.active-resource {
   border-bottom: 4px solid var(--button-secondary-color);
 }
 .resources-slidebar-text {
@@ -1300,13 +1332,13 @@ header {
   padding-bottom: 0px;
   background-position-y: 50px;
 }
-.resources-content-image img {
+.resources-content-image-section img {
   width: 100%;
   border-radius: 0.5rem;
   object-fit: cover;
 }
 .resources-global-section-bg-img {
-  background-image: url(assets/pictures/Desktop-AzureRegions-2x.avif);
+  /* background-image: url(assets/pictures/Desktop-AzureRegions-2x.avif); */
   background-position: center;
   background-size: cover;
 }
@@ -2266,7 +2298,7 @@ div.customer-arrow {
   }
 
   .solution-content-details-image-section {
-    display: none;
+    display: none !important;
   }
 
   .solutions-content-details {
@@ -2285,7 +2317,7 @@ div.customer-arrow {
   }
 
   .solutions-ms-min-860-image-section {
-    grid-column: 2/4;
+    /* grid-column: 2/4; */
   }
 
   .solutions-content-details-list {
@@ -2293,7 +2325,7 @@ div.customer-arrow {
     border-bottom: 1px solid rgb(207, 207, 207);
   }
 
-  .first-with-exception .solutions-content-details-list {
+  .active-tab-item .solutions-content-details-list {
     padding-top: 0;
   }
 
@@ -2309,9 +2341,10 @@ div.customer-arrow {
     height: fit-content;
     padding-left: 3rem;
     border: none;
+    /* transition: all 0.3s ease-in; */
   }
 
-  .solutions-content-details-lists li:first-child {
+  li.active-tab-item {
     border-left: 0.2em solid var(--button-secondary-color);
   }
 
@@ -2323,8 +2356,9 @@ div.customer-arrow {
     padding: 0 0;
   }
 
-  .first-with-exception .solutions-content-details-text-arrow {
-    padding-bottom: 2rem;
+  .active-tab-item .solutions-content-details-text-arrow {
+    /* padding-bottom: 2rem; */
+    padding: 2rem 0;
   }
 
   .solutions-ms-min-860-image-section {
@@ -2332,6 +2366,13 @@ div.customer-arrow {
     display: flex;
     justify-content: end;
     margin-left: 24.5%;
+    grid-column: 2/4;
+    transition: transform 0.4s ease-in;
+    transform: translateX(100%);
+  }
+
+  .active-tab-img {
+    transform: translateX(0);
   }
 
   .solutions-ms-min-860-image-section img {
@@ -2345,6 +2386,11 @@ div.customer-arrow {
 
   .products-content-phi-inner-box {
     padding: 1.5rem;
+    background: linear-gradient(
+      180deg,
+      rgba(244, 250, 253, 0) 0%,
+      #f4fafd 100%
+    );
   }
 
   .products-content-phi-text-area {
@@ -2360,6 +2406,7 @@ div.customer-arrow {
     margin-right: 8px;
     height: 38vw;
     margin-bottom: 1rem;
+    flex: 0 0 25%;
   }
 
   .products-content-inner-marble-section {
@@ -2374,6 +2421,10 @@ div.customer-arrow {
 
   #products .solutions-content-details-link {
     margin-top: 2rem;
+  }
+
+  .products-content-second-section {
+    max-width: 75%;
   }
 
   .products-content-inner-marble-section {
@@ -2476,6 +2527,7 @@ div.customer-arrow {
 
   .resources-content-inner-section {
     margin-right: -4px;
+    box-sizing: border-box;
   }
 
   .resources-section-slidebar-list-items li {
@@ -2485,7 +2537,8 @@ div.customer-arrow {
   .resources-slidebar-item {
     height: 100%;
     width: 100%;
-    padding: 1rem 1.5rem 1.5rem;
+    /* padding: 1rem 1.5rem 1.5rem; */
+    padding: 20px 24px;
   }
 
   .resources-section-slidebar-items {
@@ -2920,10 +2973,10 @@ div.customer-arrow {
   }
 
   .marble-heading-text {
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 1.5rem;
-    letter-spacing: -0.03em;
+    /* font-size: 1.25rem; */
+    /* font-weight: 600; */
+    /* line-height: 1.5rem; */
+    /* letter-spacing: -0.03em; */
   }
 
   .section-sub-text {
@@ -2974,7 +3027,7 @@ div.customer-arrow {
   }
 
   #products .marble-text-contents {
-    padding-bottom: 0px;
+    /* padding-bottom: 0px; */
   }
 
   #products .marble-heading {
@@ -2987,14 +3040,7 @@ div.customer-arrow {
   }
 
   #products .marble {
-    height: 274px;
-  }
-
-  #products .l3 {
-    max-width: 316px;
-    max-height: 302px;
-    height: 302px;
-    margin-top: -12px;
+    /* height: 274px; */
   }
 
   .products-phi-box-heading {

@@ -4,6 +4,10 @@ import navbarElements from './navbarElements.js';
 import heroBanner from './heroBanner.js';
 import stickyNav from './stickyNav.js';
 import sectionView from './sectionView.js';
+import solutionsSection from './solutionsSection.js';
+import productsSection from './productsSection.js';
+import resourcesSection from './resourcesSection.js';
+import customerSection from './customerSection.js';
 
 let data;
 
@@ -21,6 +25,11 @@ async function init() {
     heroBanner.banner(data.heroBanner);
     stickyNav.render(data.sections);
     sectionView.render(data.sections);
+    solutionsSection.render(data.sections.solutions);
+    productsSection.render(data.sections.products);
+    resourcesSection.render(data.sections.resources);
+    customerSection.render(data.sections.customer);
+    // console.log();
 
     // Object.keys(data.sections).forEach((key) => {
     //   // console.log(key, '..', data.sections[key].id);
