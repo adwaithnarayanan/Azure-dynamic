@@ -12,6 +12,8 @@ class Customers {
       this._createCard(this._data[key]);
       this._createTabItem(this._data[key], idx);
     });
+
+    this._sliderListener();
   }
 
   _createCard(data) {
@@ -132,7 +134,45 @@ class Customers {
 
   _isInViewport(marble) {
     const rect = marble.getBoundingClientRect();
-    return rect.x >= 0 && rect.right <= rect.width + 200;
+    return rect.x >= 0 && rect.right <= rect.width + 350;
+  }
+
+  _sliderListener() {
+    const arrows = document.querySelectorAll('.customer-arrow');
+    const cardContainer = document.querySelector(
+      '.customer-section-inner-marbles'
+    );
+
+    const marbles = cardContainer.querySelectorAll('.marble');
+
+    let counter = 0;
+
+    arrows.forEach((arrow) => {
+      arrow.addEventListener('click', () => {
+        const direction = arrow.id;
+        console.log(direction);
+
+        if (direction === 'right') {
+          counter++;
+          if (counter > 4) counter = 4;
+
+          marbles[counter].scrollIntoView({ behavior: 'smooth' });
+        } else if (direction === 'left') {
+          counter--;
+          if (counter < 0) counter = 0;
+          marbles[counter].scrollIntoView({ behavior: 'smooth' });
+        }
+
+        if (counter === 0) {
+          arrows[0].classList.remove('active');
+        } else if (counter === 4) {
+          arrows[1].classList.remove('active');
+        } else {
+          arrows[0].classList.add('active');
+          arrows[1].classList.add('active');
+        }
+      });
+    });
   }
 }
 

@@ -17,6 +17,8 @@ class Products {
 
     this._showMoreText(data.productsCount);
     this._createGartnerMarble(data.gartnerMarble);
+
+    this._eventListener();
   }
 
   _createGartnerMarble(item) {
@@ -169,6 +171,26 @@ class Products {
     elements
       .querySelectorAll('li')
       .forEach((el) => el.children[0].classList.remove('active-tab'));
+  }
+
+  _eventListener() {
+    const slider = document.querySelector('.product-section-slidebar-items');
+    const rightBtn = document.querySelector('#products-right');
+    const leftBtn = document.querySelector('#products-left');
+
+    let content_scroll_width = slider.scrollWidth;
+
+    rightBtn.addEventListener('click', () => {
+      slider.scrollTo({ left: content_scroll_width, behavior: 'smooth' });
+      leftBtn.classList.remove('hide');
+      rightBtn.classList.add('hide');
+    });
+
+    leftBtn.addEventListener('click', () => {
+      slider.scrollTo({ left: 0, behavior: 'smooth' });
+      rightBtn.classList.remove('hide');
+      leftBtn.classList.add('hide');
+    });
   }
 }
 

@@ -42,5 +42,3 @@ async function init() {
 
 // INITIAL CALL
 init();
-
-// JS-> 263 | JSON-> 242 || till 05/08/2024

@@ -9,6 +9,8 @@ class Footer {
 
     this._createFooterResources(this._data.footerResource);
     this._createEndFooter(this._data.footer2);
+
+    this._createFixedBtn();
   }
 
   _createFooterResources(data) {
@@ -129,6 +131,21 @@ class Footer {
     div.appendChild(ul);
 
     return div;
+  }
+
+  _createFixedBtn() {
+    const div = document.createElement('div');
+    div.classList.add('sticky-button');
+
+    div.innerHTML = `
+      <button>
+        Chat with sales
+        <div class="sticky-btn-logo">
+        </div>
+      </button>
+    `;
+
+    document.body.appendChild(div);
   }
 }
 

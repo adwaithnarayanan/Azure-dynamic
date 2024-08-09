@@ -11,6 +11,7 @@ class NavbarElements {
   _goBackBtn = document.querySelector('.go-back');
   _searchDesktop = document.querySelector('#search-desktop');
   _cancelBtn = document.querySelector('.cancel-btn');
+  _moreBtn = document.querySelector('#contextual-more');
 
   data;
 
@@ -28,6 +29,8 @@ class NavbarElements {
     this.createMenuItems(nav.navMenu);
     this.eventListeners();
     this.screenChange();
+
+    this._contextualMoreListener();
   };
 
   // FUNCTIONS
@@ -257,6 +260,69 @@ class NavbarElements {
             .classList.add('hide');
         }
       }
+    });
+  }
+
+  _contextualMoreListener() {
+    // More button event Listener
+    this._moreBtn.addEventListener('click', () => {
+      const width = window.innerWidth;
+
+      if (document.querySelector('.dropdown-body')) {
+        document.querySelector('.dropdown-body').remove();
+      }
+
+      const parentPosition = this._moreBtn.getBoundingClientRect().x;
+
+      const divEl = document.createElement('div');
+      divEl.classList.add('dropdown-contextualmenu');
+
+      const keys = [];
+      let newKey = [];
+
+      this.data.contextualMenu.forEach((item) => {
+        keys.push(item[0].toUpperCase() + item.slice(1));
+      });
+
+      if (width >= 1084 && width < 1103) {
+        // Products .....
+        newKey = keys.slice(1);
+      } else if (width >= 1103 && width < 1200) {
+        // Solutions ....
+        newKey = keys.slice(2);
+      } else if (width >= 1200 && width < 1282) {
+        // Pricing ....
+        newKey = keys.slice(3);
+      } else if (width >= 1282 && width < 1370) {
+        // Partners ...
+        newKey = keys.slice(4);
+      } else if (width >= 1370) {
+        // Resources ...
+        newKey = keys.slice(5);
+      }
+
+      divEl.appendChild(this.createDropdownList(newKey));
+
+      const dropdownBody = document.createElement('div');
+      dropdownBody.classList.add('dropdown-body');
+
+      dropdownBody.appendChild(divEl);
+
+      dropdownBody.addEventListener('click', (e) => {
+        if (e.target.classList.contains('dropdown-body')) {
+          dropdownBody.remove();
+        }
+      });
+
+      document.querySelector('#dropdown-container').appendChild(dropdownBody);
+
+      const { leftPosition, objectWidth } = this.calculatePosition(
+        parentPosition,
+        divEl.getBoundingClientRect().width
+      );
+
+      divEl.style.left = `${leftPosition}px`;
+      divEl.style.width = `${objectWidth + 60}px`;
     });
   }
 }

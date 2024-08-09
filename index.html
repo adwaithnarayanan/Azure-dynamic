@@ -43,7 +43,6 @@
           <div class="header-ms-min-860-contents bx">
             <div class="header-ms-min-860-brand-name bx">
               <span class="header-ms-min-860-brand-logo bx" id="brand-logo">
-                <!-- <img src="assets/icons/microsoft-name-logo.png" alt="" /> -->
               </span>
             </div>
             <span class="header-ms-min-860-section-divide"> </span>
@@ -62,19 +61,6 @@
 
                     <span class="down-arrow"> </span>
                   </li>
-
-                  <!-- <div class="dropdown-body">
-                    <div class="dropdown-contextualmenu">
-                      <ul class="dropdown-items">
-                        <li>Get to know Azure</li>
-                        <li>Global infrastructure</li>
-                        <li>FinOps on Azure</li>
-                        <li>Azure essentials</li>
-                        <li>Customer stories</li>
-                        <li>Azure innovation insights</li>
-                      </ul>
-                    </div>
-                  </div> -->
                 </ul>
               </div>
               <div class="header-ms-min-860-search-icon">
@@ -106,16 +92,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="dropdown-contextualmenu">
-          <ul class="dropdown-items">
-            <li>Get to know Azure</li>
-            <li>Global infrastructure</li>
-            <li>FinOps on Azure</li>
-            <li>Azure essentials</li>
-            <li>Customer stories</li>
-            <li>Azure innovation insights</li>
-          </ul>
-        </div> -->
       </div>
     </header>
 
@@ -127,10 +103,6 @@
       </button>
       <ul class="catelog-items hide bx">
         <li>Home</li>
-        <!-- <li>Explore</li>
-          <li>Products</li>
-          <li>Solutions</li>
-          <li>Pricing</li> -->
       </ul>
     </div>
 
@@ -139,9 +111,6 @@
         <div class="main1-inner-section bx">
           <div class="main1-contents bx">
             <div id="background" class="background-container bx">
-              <!-- <video class="background-item" autoplay muted>
-                <source src="assets/videos/main-video.mp4" type="video/mp4" />
-              </video> -->
               <div class="main1-text-contents cb">
                 <div class="main1-text-area cb">
                   <div class="main1-textbox row1 bx">
@@ -244,8 +213,22 @@
                       class="solution-section-slidebar-items"
                       id="solutions-tab"
                     ></div>
-                    <div class="solutions-arrow-key">
-                      <div class="solutions-slidebar-right-arrow">
+
+                    <div
+                      class="solutions-arrow-key arrow-left hide"
+                      id="solution-left"
+                    >
+                      <div class="solutions-slidebar-arrow">
+                        <span class="solution-slidebar-left-arrow-box">
+                          ∟
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="solutions-arrow-key arrow-right"
+                      id="solution-right"
+                    >
+                      <div class="solutions-slidebar-arrow">
                         <span class="solution-slidebar-right-arrow-box">
                           ∟
                         </span>
@@ -302,8 +285,22 @@
                       class="product-section-slidebar-items solution-section-slidebar-items"
                       id="products-tab"
                     ></div>
-                    <div class="solutions-arrow-key">
-                      <div class="solutions-slidebar-right-arrow">
+
+                    <div
+                      class="solutions-arrow-key arrow-left hide"
+                      id="products-left"
+                    >
+                      <div class="solutions-slidebar-arrow">
+                        <span class="solution-slidebar-left-arrow-box">
+                          ∟
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="solutions-arrow-key arrow-right"
+                      id="products-right"
+                    >
+                      <div class="solutions-slidebar-arrow">
                         <span class="solution-slidebar-right-arrow-box">
                           ∟
                         </span>
@@ -373,8 +370,20 @@
                     class="resources-section-slidebar-items solution-section-slidebar-items"
                     id="resources-tab"
                   ></div>
-                  <div class="solutions-arrow-key">
-                    <div class="solutions-slidebar-right-arrow">
+
+                  <div
+                    class="solutions-arrow-key arrow-left hide"
+                    id="resource-left"
+                  >
+                    <div class="solutions-slidebar-arrow">
+                      <span class="solution-slidebar-left-arrow-box"> ∟ </span>
+                    </div>
+                  </div>
+                  <div
+                    class="solutions-arrow-key arrow-right"
+                    id="resource-right"
+                  >
+                    <div class="solutions-slidebar-arrow">
                       <span class="solution-slidebar-right-arrow-box"> ∟ </span>
                     </div>
                   </div>
@@ -417,19 +426,15 @@
 
             <div class="customer-arrow-key-section">
               <div class="customer-arrow-keys">
-                <div class="customer-left-arrow-section">
-                  <div class="customer-arrow">
-                    <div class="customer-arrow-mark">
-                      <img src="assets/icons/left-arrow.png" alt="" />
-                    </div>
+                <div class="customer-arrow" id="left">
+                  <div class="customer-arrow-mark">
+                    <img src="assets/icons/left-arrow.png" alt="" />
                   </div>
-                  <div class="customer-arrow-overlay-div"></div>
                 </div>
-                <div class="customer-right-arrow-section">
-                  <div class="customer-arrow">
-                    <div class="customer-arrow-mark">
-                      <img src="assets/icons/right-arrow.png" alt="" />
-                    </div>
+
+                <div class="customer-arrow active" id="right">
+                  <div class="customer-arrow-mark">
+                    <img src="assets/icons/right-arrow.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -443,7 +448,6 @@
               <span
                 class="section-view-all-link-arrow explore-more-icon-parent"
               >
-                <!-- <img src="assets/icons/icons8-arrow-100.png" alt="" /> -->
               </span>
               <span class="section-view-all-link-item explore-more-text">
                 View all stories
@@ -462,95 +466,10 @@
           <div class="footer-top-section bx"></div>
 
           <div class="footer-end-section bx">
-            <div class="footer-end-section-container bx">
-              <!-- -->
-              <!-- <div class="footer-end-section-inner-container bx">
-                <div class="footer-end-section-language-privacy-section bx">
-                  <div class="footer-end-section-language-section bx">
-                    <div class="footer-end-section-merge bx">
-                      <div class="footer-end-earth-icon bx">
-                        <img src="assets/icons/earth.png" alt="" />
-                      </div>
-                      <div class="earth-icon-shade bx"></div>
-                    </div>
-                    <div class="footer-end-section-language-text bx">
-                      English (United Kingdom)
-                    </div>
-                  </div>
-                  <div class="footer-end-section-privacy-section bx">
-                    <span class="footer-end-section-tick-icon bx">
-                      <img src="assets/icons/privacy-icon.svg" alt="" />
-                    </span>
-                    <span class="footer-end-section-privacy-text bx">
-                      Your Privacy Choices
-                    </span>
-                  </div>
-                  <div class="footer-end-section-consumer bx">
-                    <span class="footer-end-section-consumer-text bx">
-                      Consumer Health Privacy
-                    </span>
-                  </div>
-                </div>
-
-                <div class="footer-end-last-section-container bx">
-                  <ul class="footer-end-last-section-items bx">
-                    <li>
-                      <span class="footer-end-last-section-text bx">
-                        Contact Microsoft
-                      </span>
-                    </li>
-                    <li>
-                      <span class="footer-end-last-section-text bx">
-                        Privacy
-                      </span>
-                    </li>
-                    <li>
-                      <span class="footer-end-last-section-text bx">
-                        Terms of use
-                      </span>
-                    </li>
-                    <li>
-                      <span class="footer-end-last-section-text bx">
-                        Trademarks
-                      </span>
-                    </li>
-                    <li>
-                      <span class="footer-end-last-section-text bx">
-                        About our ads
-                      </span>
-                    </li>
-                    <li>
-                      <span class="footer-end-last-section-text bx">
-                        EU Compilance DoCs
-                      </span>
-                    </li>
-                    <li>
-                      <span class="footer-end-last-section-text bx">
-                        Regulatory reporting
-                      </span>
-                    </li>
-                    <li class="xyz">
-                      <span class="footer-end-last-section-text bx">
-                        © Microsoft 2024
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div> -->
-              <!---->
-            </div>
+            <div class="footer-end-section-container bx"></div>
           </div>
         </div>
       </div>
     </footer>
-
-    <div class="sticky-button">
-      <button>
-        <div class="sticky-btn-text">Chat with sales</div>
-        <div class="sticky-btn-logo">
-          <img src="assets/icons/icons8-chat-100.png" alt="" />
-        </div>
-      </button>
-    </div>
   </body>
 </html>

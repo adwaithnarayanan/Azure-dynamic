@@ -970,17 +970,17 @@
     ],
     "footer2": {
       "globeIcon": "assets/icons/earth.png",
-      "lang": "English (United Kingdom",
+      "lang": "English (United Kingdom)",
       "privacyIcon": "assets/icons/privacy-icon.svg",
       "privacyText": "Your Privacy Choices",
       "consumer": "Consumer Health Privacy",
       "footerList": [
-        "Contact Micrsoft",
+        "Contact Microsoft",
         "Privacy",
         "Terms of use",
         "Trademarks",
         "About our ads",
-        "EU Compliance",
+        "EU Compliance DoCs",
         "Regulatory reporting",
         "© Microsoft 2024"
       ]

@@ -4,16 +4,6 @@
   scroll-behavior: smooth;
 }
 
-/* @font-face {
-  font-family: 'MWF-MDL2';
-  src: url('https://www.microsoft.com/mwf/_h/v3.54/mwf.app/fonts/mwfmdl2-v3.54.woff')
-      format('woff'),
-    url('https://www.microsoft.com/mwf/_h/v3.54/mwf.app/fonts/mwfmdl2-v3.54.ttf')
-      format('truetype'),
-    url('https://www.microsoft.com/mwf/_h/v3.54/mwf.app/fonts/mwfmdl2-v3.54.svg')
-      format('svg');
-} */
-
 @font-face {
   font-family: SegoeUI;
   src: url('assets/fonts/latest-normal.woff2');
@@ -133,11 +123,9 @@
 body {
   padding: 0px;
   margin: 0px;
-  /* font-family: var(--font-family-segoeui); */
   font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial,
     sans-serif;
   box-sizing: border-box;
-  /* overflow-x: hidden; */
 }
 
 .bx {
@@ -207,7 +195,6 @@ header {
 .hamburger-menu li {
   padding: 14px 24px 15px 15px;
   margin: 1px;
-  /* margin-top: 0.2px; */
   line-height: 20px;
   color: rgb(38, 38, 38);
   cursor: pointer;
@@ -217,8 +204,6 @@ header {
     sans-serif;
 
   border-bottom: 1px solid #e6e6e6;
-
-  /* height: 49px; */
 }
 
 .header-hamburger-inner-contents {
@@ -593,7 +578,6 @@ header {
   margin-left: 2px;
   width: calc(100% - 145px);
   padding: 8px;
-  /* border-bottom-right-radius: 15px; */
   border-radius: 8px;
   overflow-x: hidden;
 }
@@ -652,8 +636,6 @@ header {
 
 .sticky-nav-arrow {
   transition: transform 0.4s ease-in;
-  /* transform: rotateZ(180deg); */
-  /* rotate: (90deg); */
 }
 
 .section1-button {
@@ -898,14 +880,21 @@ header {
 
 .solutions-arrow-key {
   position: absolute;
-  right: -4px;
   top: 0;
   height: 100%;
   display: flex;
   justify-content: end;
 }
 
-.solutions-slidebar-right-arrow {
+.solutions-arrow-key.arrow-left {
+  left: -4px;
+}
+
+.solutions-arrow-key.arrow-right {
+  right: -4px;
+}
+
+.solutions-slidebar-arrow {
   width: 36px;
   height: 36px;
   background: rgb(0, 0, 0);
@@ -920,6 +909,14 @@ header {
   justify-content: center;
   border: 2px solid #005597;
   font-size: 16px;
+}
+
+.solution-slidebar-left-arrow-box {
+  transform: rotateZ(42deg);
+  font-size: 22px;
+  font-weight: 100;
+  color: var(--text-teritiary-color);
+  padding-bottom: 13px;
 }
 
 .solution-slidebar-right-arrow-box {
@@ -951,9 +948,6 @@ header {
   font-size: 1rem;
   transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   line-height: 1.5625rem;
-
-  /* width: 16px;
-  height: 16px; */
 }
 
 .active-tab-item .solutions-content-details-arrow {
@@ -1078,7 +1072,6 @@ header {
 
 .products-content-phi-box {
   height: 100%;
-  /* background-image: url(assets/pictures/ACOM-HP-Desktop-ENUS-Product-PromoCard-Phi3-Overlay@2x.avif); */
   border-radius: 1rem;
   overflow: hidden;
   background-position: center;
@@ -1093,19 +1086,19 @@ header {
 
 .products-content-phi-inner-box {
   padding: 1rem;
-  /* color: #ffffff; */
   width: 100%;
   height: 100%;
-  /* background: rgb(0, 0, 0); */
-  /* background: linear-gradient(180deg,rgba(0, 0, 0, 0.8839907192575406) 17%, rgba(242, 242, 242, 0) 94%); */
   display: flex;
+  background: linear-gradient(180deg, rgba(244, 250, 253, 0) 0%, #f4fafd 100%);
 }
+
 .products-content-phi-text-area {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   justify-content: end;
 }
+
 .products-phi-box-heading {
   font-weight: 600;
   font-size: 1.5rem;
@@ -1115,15 +1108,15 @@ header {
   display: flex;
   align-items: end;
 }
+
 .products-phi-box-description {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: -0.03em;
-  /* color: #dceef8; */
 }
+
 .products-phi-box-button button {
-  /* background-color: #b3daf0; */
   background-color: rgb(0, 120, 212);
   color: #fff;
   font-family: var(--font-family-SegoeUI-60000);
@@ -1136,12 +1129,14 @@ header {
   padding: 0.875rem;
   padding-bottom: 1rem;
 }
+
 .products-content-inner-marble-section {
   display: flex;
   flex-direction: column;
   gap: 0.89rem;
   box-sizing: border-box;
 }
+
 .marble-icon {
   width: 48px;
   height: 48px;
@@ -1151,30 +1146,38 @@ header {
   border: 0.5px solid rgb(235, 230, 230);
   border-radius: 0.5rem;
 }
+
 .marble-icon img {
   width: 24px;
   height: 24px;
 }
+
 #products .solutions-content-details-link {
   margin-bottom: 0px;
   margin-top: 1.25rem;
 }
+
 #products .marble {
   align-items: start;
   margin-right: 4px;
 }
+
 #products .section-view-all-link {
   margin-top: 2rem;
 }
+
 #products .solutions-content-detail-explore-link {
   padding-bottom: 0.25rem;
 }
+
 .gartner-marble-section {
   padding-top: 6.5rem;
 }
+
 .gartner-marble-inner-section {
   margin-top: 1.5rem;
 }
+
 .gartner-marble {
   background-color: #ffffff;
   box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.12),
@@ -1182,38 +1185,45 @@ header {
   border-radius: 1rem;
   margin-right: 4px;
 }
+
 .gartner-marble-text {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
+
 .gartner-marble-text-area {
   padding: 13px;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
+
 .gartner-marble-content-area {
   width: 100%;
   display: flex;
   flex-direction: column-reverse;
 }
+
 .gartner-marble-heading {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 2rem;
   letter-spacing: -0.05em;
 }
+
 .gartner-marble-inner-text-area {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
+
 .gartner-marble-description {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: -0.03em;
 }
+
 .gartner-marble-button button {
   background-color: #0078d4;
   color: white;
@@ -1225,9 +1235,11 @@ header {
   line-height: 1.375rem;
   height: 52px;
 }
+
 .gartner-marble-image-section {
   padding: 7px 9px 0;
 }
+
 .gartner-marble-image-section img {
   object-fit: cover;
   width: 100%;
@@ -1239,16 +1251,18 @@ header {
 #resources {
   background-color: #f5fafd;
 }
+
 .resources-section-container {
-  /* background-image: url(assets/pictures/resources-background_mobile@2x.avif); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 100px;
 }
+
 .resources-section-inner-container {
   padding-left: 20px;
   padding-right: 17px;
 }
+
 .resources-section-text-area {
   text-align: center;
   display: flex;
@@ -1256,12 +1270,15 @@ header {
   justify-content: center;
   align-items: center;
 }
+
 #resources .section-sub-text {
   font-size: 1.75rem;
 }
+
 .resources-section-slidebar-area {
   margin-top: 18px;
 }
+
 .resources-section-slidebar-list-items {
   display: flex;
   width: 1314px;
@@ -1269,6 +1286,7 @@ header {
   overflow: hidden;
   border: 1px solid rgb(228, 228, 228);
 }
+
 .resources-section-slidebar-list-items li {
   width: 220.33px;
   height: 52px;
@@ -1276,27 +1294,32 @@ header {
   border-right: 1px solid rgb(228, 228, 228);
   cursor: pointer;
 }
+
 .resources-slidebar-item {
   height: 100%;
   width: 100%;
   padding: 12px 16px 16px;
 }
+
 .active-resource {
   border-bottom: 4px solid var(--button-secondary-color);
 }
+
 .resources-slidebar-text {
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: -0.03em;
 }
+
 #resources .solutions-arrow-key {
   padding-top: 8px;
-  right: -8px;
 }
+
 .resources-contents {
   padding: 36px 0 48px;
 }
+
 .resources-content-main-text {
   font-weight: 600;
   font-size: 1.25rem;
@@ -1304,9 +1327,11 @@ header {
   letter-spacing: -0.05em;
   width: 100%;
 }
+
 #resources .section-view-all-link-item {
   padding-bottom: 5px;
 }
+
 .resources-text-contents {
   display: flex;
   flex-direction: column;
@@ -1316,12 +1341,15 @@ header {
   width: calc(14 / 24 * 100%);
   margin: 0 auto;
 }
+
 .resources-text-content-main {
   padding: 0px;
 }
+
 .resources-explore-more-link {
   margin-top: 0.75rem;
 }
+
 .resources-content-image-section {
   overflow: hidden;
   margin-top: 24px;
@@ -1329,25 +1357,29 @@ header {
   background-color: rgba(255, 255, 255, 0.195);
   border-radius: 1rem;
 }
+
 .resources-section-container {
   padding-top: 56px;
   padding-bottom: 0px;
   background-position-y: 50px;
 }
+
 .resources-content-image-section img {
   width: 100%;
   border-radius: 0.5rem;
   object-fit: cover;
 }
+
 .resources-global-section-bg-img {
-  /* background-image: url(assets/pictures/Desktop-AzureRegions-2x.avif); */
   background-position: center;
   background-size: cover;
 }
+
 .resources-global-section-inner-contents {
   color: white;
   padding: 3.5rem 1rem;
 }
+
 .resources-global-section-inner-contents {
   display: flex;
   flex-direction: column;
@@ -1356,26 +1388,31 @@ header {
   text-align: center;
   color: #dceef8;
 }
+
 .resources-global-heading-text {
   font-weight: 600;
   font-size: 2rem;
   line-height: 2.5rem;
   letter-spacing: -0.05em;
 }
+
 .resources-global-section-description {
   margin-top: 12px;
 }
+
 .resources-global-description-text {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.75rem;
   letter-spacing: -0.03em;
 }
+
 .resources-global-section-button {
   width: 100%;
   width: max-content;
   margin-top: 24px;
 }
+
 .resources-global-section-button button {
   padding-bottom: 0.125rem;
   font-size: 0.9375rem;
@@ -1389,6 +1426,7 @@ header {
   background-color: #b3daf0;
   color: #5b6d78;
 }
+
 .resources-global-section-inner-contents {
   padding-bottom: 80px;
 }
@@ -1397,15 +1435,15 @@ header {
 #customer {
   background-color: #f4fafd;
 }
-.customer-section-container {
-  /* padding-top: px; */
-}
+
 .customer-section-marble-area {
   margin-top: 35px;
 }
+
 .customer-section-marbles {
   padding-bottom: 2px;
 }
+
 .customer-section-inner-marbles {
   align-items: stretch;
   display: flex;
@@ -1423,9 +1461,7 @@ header {
 }
 
 .customer-section-inner-marbles .marble {
-  /* text-align: center; */
   scroll-snap-align: center;
-  /* flex: none; */
 }
 
 #customer .marble {
@@ -1438,11 +1474,13 @@ header {
   flex-grow: 0;
   flex-shrink: 0;
 }
+
 #customer .inner-marble {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
+
 #customer .marble-image {
   flex-grow: 1;
   flex-shrink: 0;
@@ -1451,12 +1489,14 @@ header {
   height: initial;
   aspect-ratio: initial;
 }
+
 #customer .marble-image img {
   object-fit: cover;
   width: 100%;
   height: inherit;
   aspect-ratio: initial;
 }
+
 #customer .marble-text-contents {
   display: flex;
   flex-direction: column;
@@ -1464,41 +1504,49 @@ header {
   gap: 1.5rem;
   flex-grow: 1;
 }
+
 #customer .marble-text-contents-inner-section {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
+
 .customer-marble-logo {
   height: 77px;
   display: flex;
   align-items: start;
 }
+
 .customer-marble-logo img {
   border-radius: 0.5rem;
   border: 0.1px solid rgb(208, 206, 206);
 }
+
 .customer-marble-heading-text {
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.75rem;
   letter-spacing: -0.05em;
 }
+
 .customer-marble-end-section-heading {
   margin-bottom: 0.5rem;
 }
+
 .customer-marble-end-heading-text {
   font-weight: 600;
   font-size: 0.875rem;
   line-height: 1.25rem;
   letter-spacing: -0.03em;
 }
+
 .customer-marble-end-section-links {
   display: flex;
   flex-wrap: wrap;
   row-gap: 0.75rem;
   column-gap: 0.5rem;
 }
+
 .customer-marble-end-link {
   height: 26px;
   display: flex;
@@ -1506,6 +1554,7 @@ header {
   align-items: center;
   gap: 0.5rem;
 }
+
 .customer-marble-link {
   color: #0067b8;
   font-weight: 600;
@@ -1513,14 +1562,17 @@ header {
   line-height: 1.25rem;
   letter-spacing: -0.03em;
 }
+
 .customer-marble-link-icon {
   height: 100%;
   display: flex;
   align-items: center;
 }
+
 .customer-marble-end-section-button {
   margin-top: 1.5rem;
 }
+
 .customer-marble-end-button button {
   width: 100%;
   font-family: var(--font-family-SegoeUI-00);
@@ -1535,20 +1587,27 @@ header {
   letter-spacing: -0.02em;
   border-radius: 0.5rem;
 }
+
 .customer-arrow-key-section {
   margin-top: 1.98rem;
 }
+
 .customer-arrow-keys {
   display: flex;
   gap: 0.5rem;
 }
+
 div.customer-arrow {
-  border: 2px solid black;
+  border: 2px solid #aaa;
   width: fit-content;
   border-radius: 50%;
   padding: 13px 12px 13px 14px;
-  position: absolute;
 }
+
+div.customer-arrow.active {
+  border-color: #000;
+}
+
 .customer-arrow-overlay-div {
   background-color: #f4fafdaf;
   width: 50px;
@@ -1558,10 +1617,12 @@ div.customer-arrow {
   left: 0;
   top: 0;
 }
+
 .customer-arrow-mark {
   width: 20px;
   height: 20px;
 }
+
 .customer-arrow-mark img {
   width: 20px;
   height: 20px;
@@ -1635,16 +1696,6 @@ div.customer-arrow {
   box-sizing: border-box;
 }
 
-.footer-top-section-col {
-  /* padding: 0 0.75rem;
-  padding-top: 2.25rem;
-  flex: 1 1 auto; */
-}
-
-.footer-top-section-col-heading {
-  /* padding-bottom: 0.25rem; */
-}
-
 .footer-top-section-col-heading-text {
   color: #616161;
   word-break: break-word;
@@ -1665,7 +1716,6 @@ div.customer-arrow {
 .footer-top-section-col-item li {
   padding: 0.5rem 0;
   white-space: wrap;
-  /* word-break: break-all; */
 }
 
 .footer-top-section-col-item li:first-child {
@@ -1746,14 +1796,11 @@ div.customer-arrow {
 }
 
 .footer-end-section-tick-icon {
-  padding-right: 0.5rem;
-  width: 43px;
+  padding-right: 4px;
+  /* width: 43px; */
   box-sizing: border-box;
   padding-top: 2px;
-}
-
-.footer-end-section-tick-icon img {
-  /* width: 35px; */
+  margin-left: -4px;
 }
 
 .footer-end-section-tick-icon svg path {
@@ -1819,20 +1866,22 @@ div.customer-arrow {
 .sticky-button button {
   background-color: var(--button-secondary-color);
   color: #ffffff;
-  border: 2px solid transparent;
   padding: 12px 16px;
   padding-left: 2.1875rem;
   border-radius: 0.5rem;
-  font-family: var(--font-family-SegoeUI-200);
-  font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.375rem;
   letter-spacing: -0.02em;
+  border: 2px solid transparent;
+  font-weight: 600;
+  line-height: 1.375rem;
+  letter-spacing: -0.02em;
+  font-family: inherit;
 }
 
-.sticky-btn-logo img {
-  width: 18px;
-  height: 18px;
+.sticky-btn-logo::before {
+  font-family: MWF-FLUENT-ICONS;
+  content: '';
 }
 
 .sticky-btn-text {
@@ -1860,10 +1909,6 @@ div.customer-arrow {
     padding: 14px;
     padding-bottom: 15px;
     padding-top: 13px;
-  }
-
-  .section1-container {
-    /* padding: 0 4rem; */
   }
 
   .marble-section-inner-container {
@@ -1975,10 +2020,6 @@ div.customer-arrow {
     display: none;
   }
 
-  /* .contextualmenu-items li:nth-child(7) {
-    display: none;
-  }
-     */
   .header-ms-min-860 {
     display: contents;
     position: relative;
@@ -2168,7 +2209,6 @@ div.customer-arrow {
   .header-ms-min-860-search {
     display: flex;
     align-items: center;
-    /* margin: 0 8px 1px 6px; */
   }
 
   .cancel-btn,
@@ -2179,9 +2219,7 @@ div.customer-arrow {
   .header-ms-min-860-search.active {
     position: absolute;
     right: 5%;
-    /* left: 17%; */
     top: 0;
-    /* width: calc(100vw - 196px - 5%); */
     width: calc(100vw - 124px - 10%);
     flex-direction: row-reverse;
     background-color: #fff;
@@ -2224,7 +2262,6 @@ div.customer-arrow {
     height: 36px;
     margin-left: 5px;
     margin-top: 12px;
-    /* padding: 8px 18px 4px; */
     padding: 8px 18px;
     white-space: nowrap;
     width: 75px;
@@ -2437,10 +2474,6 @@ div.customer-arrow {
     overflow-y: scroll;
   }
 
-  .solutions-ms-min-860-image-section {
-    /* grid-column: 2/4; */
-  }
-
   .solutions-content-details-list {
     padding: 2rem 0;
     border-bottom: 1px solid rgb(207, 207, 207);
@@ -2462,7 +2495,6 @@ div.customer-arrow {
     height: fit-content;
     padding-left: 3rem;
     border: none;
-    /* transition: all 0.3s ease-in; */
   }
 
   li.active-tab-item {
@@ -2478,7 +2510,6 @@ div.customer-arrow {
   }
 
   .active-tab-item .solutions-content-details-text-arrow {
-    /* padding-bottom: 2rem; */
     padding: 2rem 0;
   }
 
@@ -2542,10 +2573,6 @@ div.customer-arrow {
 
   #products .solutions-content-details-link {
     margin-top: 2rem;
-  }
-
-  .products-content-second-section {
-    max-width: 75%;
   }
 
   .products-content-inner-marble-section {
@@ -2638,7 +2665,6 @@ div.customer-arrow {
 
   .resources-section-container {
     padding-bottom: 0px;
-    /* padding-top: 48px; */
     padding-top: 72px;
   }
 
@@ -2658,7 +2684,6 @@ div.customer-arrow {
   .resources-slidebar-item {
     height: 100%;
     width: 100%;
-    /* padding: 1rem 1.5rem 1.5rem; */
     padding: 20px 24px;
   }
 
@@ -2915,9 +2940,6 @@ div.customer-arrow {
   }
 
   .header-ms-max-859-search-icon {
-    /* margin: 0px 8px 1px 6px; */
-    /* padding: 8px; */
-
     padding: 15px 9px 30px;
     margin: 0 10px 1px 6px;
     width: 36px;
@@ -2928,7 +2950,6 @@ div.customer-arrow {
     align-items: center;
     font-size: 13px;
     margin-top: 1px;
-    /* margin-left: 1px; */
     padding: 0 8px;
     border: 1px solid transparent;
   }
@@ -2949,7 +2970,6 @@ div.customer-arrow {
     line-height: 1.5;
     font-weight: 500;
     font-size: 13px;
-    /* margin: 11px 8px 1px 8px; */
   }
 
   button.tryazure {
@@ -2979,8 +2999,6 @@ div.customer-arrow {
     display: flex;
     flex-direction: row;
     width: 100%;
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr); */
   }
 
   .footer-top-section-first-col-exceptionnnn {
@@ -3088,11 +3106,13 @@ div.customer-arrow {
   .main1-text2 {
     font-size: 3rem;
   }
+
   .main1-description {
     font-weight: 400;
     font-size: 1.25rem;
     line-height: 2rem;
   }
+
   .main1-text-contents {
     box-sizing: content-box;
     margin: auto;
@@ -3124,13 +3144,6 @@ div.customer-arrow {
     max-width: 1328px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .marble-heading-text {
-    /* font-size: 1.25rem; */
-    /* font-weight: 600; */
-    /* line-height: 1.5rem; */
-    /* letter-spacing: -0.03em; */
   }
 
   .section-sub-text {
@@ -3172,16 +3185,16 @@ div.customer-arrow {
     flex-wrap: inherit;
   }
 
+  .products-content-second-section {
+    max-width: 75%;
+  }
+
   .products-content-first-section {
     max-width: 318px;
     padding-right: 0.5rem;
     margin-bottom: 0;
     flex-grow: 1;
     height: inherit;
-  }
-
-  #products .marble-text-contents {
-    /* padding-bottom: 0px; */
   }
 
   #products .marble-heading {
@@ -3191,10 +3204,6 @@ div.customer-arrow {
 
   #products .marble-description {
     margin-top: 2px;
-  }
-
-  #products .marble {
-    /* height: 274px; */
   }
 
   .products-phi-box-heading {
@@ -3325,7 +3334,6 @@ div.customer-arrow {
   }
 
   .footer-end-last-section-items .xyz {
-    /* padding-left: 2px; */
     padding-right: 24px;
   }
 }
@@ -3384,13 +3392,9 @@ div.customer-arrow {
   }
 
   .main1-text-contents {
-    /* padding-left:96px;
-          padding-right: 96px; */
     max-width: 1328px;
     padding-left: 5%;
     padding-right: 5%;
-    /* margin: 0 10.5%;
-          margin-left: 10.1%; */
     margin: auto;
   }
 }

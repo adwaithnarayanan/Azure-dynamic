@@ -18,6 +18,8 @@ class Resources {
     });
 
     this._createResourcesGlobal(data.resourcesGlobal);
+
+    this._eventListener();
   }
 
   _createTab() {
@@ -25,7 +27,6 @@ class Resources {
     ulElement.classList.add('resources-section-slidebar-list-items');
 
     Object.keys(this._data).forEach((item, idx) => {
-      // console.log(this._data[item]);
       const li = document.createElement('li');
       li.innerHTML = `
         <div class="resources-slidebar-item bx ${
@@ -40,7 +41,6 @@ class Resources {
       ulElement.appendChild(li);
 
       li.addEventListener('click', () => {
-        // console.log(this._data[item]);
         this._removeActiveTab(ulElement);
         li.children[0].classList.add('active-resource');
         this._itemContainer.innerHTML = '';
@@ -114,6 +114,32 @@ class Resources {
     elements
       .querySelectorAll('li')
       .forEach((el) => el.children[0].classList.remove('active-resource'));
+  }
+
+  _eventListener() {
+    const slider = document.querySelector('.resources-section-slidebar-items');
+    const rightBtn = document.querySelector('#resource-right');
+    const leftBtn = document.querySelector('#resource-left');
+
+    let content_scroll_width = slider.scrollWidth;
+
+    let currentScroll;
+
+    // SCROLL TO RIGHT
+    rightBtn.addEventListener('click', () => {
+      currentScroll = content_scroll_width / 2;
+
+      slider.scrollTo({ left: 1000 });
+      leftBtn.classList.remove('hide');
+      rightBtn.classList.add('hide');
+    });
+
+    // SCROLL TO LEFT
+    leftBtn.addEventListener('click', () => {
+      slider.scrollTo({ left: 0 });
+      rightBtn.classList.remove('hide');
+      leftBtn.classList.add('hide');
+    });
   }
 }
 
