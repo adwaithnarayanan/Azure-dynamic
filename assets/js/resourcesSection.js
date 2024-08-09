@@ -20,6 +20,37 @@ class Resources {
     this._createResourcesGlobal(data.resourcesGlobal);
   }
 
+  _createTab() {
+    const ulElement = document.createElement('ul');
+    ulElement.classList.add('resources-section-slidebar-list-items');
+
+    Object.keys(this._data).forEach((item, idx) => {
+      // console.log(this._data[item]);
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <div class="resources-slidebar-item bx ${
+          idx === 0 ? 'active-resource' : ''
+        }">
+            <span class="resources-slidebar-text">
+                ${this._data[item].tabTitle}
+            </span>
+        </div>
+      `;
+
+      ulElement.appendChild(li);
+
+      li.addEventListener('click', () => {
+        // console.log(this._data[item]);
+        this._removeActiveTab(ulElement);
+        li.children[0].classList.add('active-resource');
+        this._itemContainer.innerHTML = '';
+        this._createItemContainer(this._data[item]);
+      });
+    });
+
+    this._resourcesTab.appendChild(ulElement);
+  }
+
   _createResourcesGlobal(data) {
     this._resourcesGlobalEl.style.backgroundImage = `url(${data.background})`;
 
@@ -44,12 +75,6 @@ class Resources {
     `;
 
     this._resourcesGlobalEl.appendChild(div);
-  }
-
-  _setSectionBackground(media) {
-    document.querySelector(
-      '.resources-section-container'
-    ).style.backgroundImage = `url(${media})`;
   }
 
   _createItemContainer(item) {
@@ -79,31 +104,10 @@ class Resources {
     this._itemContainer.appendChild(div);
   }
 
-  _createTab() {
-    const ulElement = document.createElement('ul');
-    ulElement.classList.add('resources-section-slidebar-list-items');
-
-    Object.keys(this._data).forEach((item, idx) => {
-      const li = document.createElement('li');
-      li.innerHTML = `
-        <div class="resources-slidebar-item bx ${
-          idx === 0 ? 'active-resource' : ''
-        }">
-            <span class="resources-slidebar-text">
-                ${this._data[item].tabTitle}
-            </span>
-        </div>
-      `;
-
-      ulElement.appendChild(li);
-
-      li.addEventListener('click', () => {
-        this._removeActiveTab(ulElement);
-        li.children[0].classList.add('active-resource');
-      });
-    });
-
-    this._resourcesTab.appendChild(ulElement);
+  _setSectionBackground(media) {
+    document.querySelector(
+      '.resources-section-container'
+    ).style.backgroundImage = `url(${media})`;
   }
 
   _removeActiveTab(elements) {

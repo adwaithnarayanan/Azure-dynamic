@@ -21,7 +21,10 @@ class StickyNav {
 
   _getVisibleSection() {
     window.addEventListener('scroll', (e) => {
+      // console.log(this._sections);
+      // console.log(this._sections);
       this._sections.forEach((section, idx) => {
+        // console.log(section);
         if (this._isInViewport(section)) {
           this._setActiveSection(section.id);
         }
@@ -30,6 +33,7 @@ class StickyNav {
   }
 
   _setActiveSection(active) {
+    // console.log(active);
     const items = document.querySelectorAll('.section1-ms-min-860-list-text a');
     items.forEach((item) => {
       const index = item.href.indexOf('#') + 1;

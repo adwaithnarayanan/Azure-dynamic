@@ -750,7 +750,7 @@
           "tabTitle": "Developers",
           "blockHeading": "Create today's solutions and tomorrow's breakthroughs.",
           "more": "Innovate on Azure",
-          "media": "assets/pictures/resources-pictures/devlopers.avif"
+          "media": "assets/pictures/resources-pictures/developers.avif"
         },
         "dataAnalyst": {
           "id": "dataAnalyst",
@@ -797,6 +797,7 @@
           "id": "lego",
           "cardLogo": "assets/icons-customer-section/Customer-logos-LEGO-@2x.avif",
           "para": "LEGO House takes the physical brick to new frontiers wit inventive, interactive digital experiences built with Azure solutions",
+          "media": "assets/pictures/Customer-img-LEGO-2x.avif",
           "products": [
             {
               "icon": "assets/icons-customer-section/Customer-LEGO-Product-AzureIoTEdge.svg",
@@ -813,6 +814,7 @@
           "id": "siemens",
           "cardLogo": "assets/icons-customer-section/Customer-logos-SIEMENS-@2x.avif",
           "para": "Siemens connect frontline workers and engineers fo real-time problem-solving using Azure AI studio",
+          "media": "assets/pictures/Customer-img-SIEMENS-2x.avif",
           "products": [
             {
               "icon": "assets/icons-customer-section/Customer-SIEMENTS-Product-AzureAIStudio.svg",
@@ -833,6 +835,7 @@
           "id": "heineken",
           "cardLogo": "assets/icons-customer-section/Customer-logos-HEINEKEN-@2x (1).avif",
           "para": "HEINEKEN built that chatbots that connect employees with information across the company using Azure OpenAI Service and its built-in ChatGPT capabilities.",
+          "media": "assets/pictures/Customer-img-Heineken-2x.avif",
           "products": [
             {
               "icon": "assets/icons-customer-section/Customer-SIEMENTS-Product-AzureOpenAIService.svg",
@@ -845,6 +848,7 @@
           "id": "gm",
           "cardLogo": "assets/icons-customer-section/customer-logo-gm-2x-1.avif",
           "para": "General Motors reimagined its developer tool chain and its onboarding experience with Azure cloud-based developer services.",
+          "media": "assets/pictures/customer-image-gm-2x.avif",
           "products": [
             {
               "icon": "assets/icons-customer-section/Customer-GM-Product-Microsoft-DevBox.svg",
@@ -865,6 +869,7 @@
           "id": "unilever",
           "cardLogo": "assets/icons-customer-section/customer-logo-unilever-2x-1.webp",
           "para": "Unilever laid tha foundation for unconstrained capacity for business growth by migrating its  SAP estate to Azure in just 18 months.",
+          "media": "assets/pictures/customer-image-unilever-2x.avif",
           "products": [
             {
               "icon": "assets/icons-customer-section/Customer-Unilever-Product-SAP.svg",
@@ -886,6 +891,99 @@
           "button": "Case study"
         }
       }
+    }
+  },
+  "nextStep": {
+    "sectionHeading": "Take the next step",
+    "backgroundMobile": "assets/pictures/cta-background_mobile@2x.avif",
+    "backgroundDesktop": "assets/pictures/CTA-BG-desktop@2x.avif",
+    "cards": [
+      {
+        "cardTitle": "Start building on Azure free",
+        "cardPara": "Get free services and a USD200 credit to explore Azure for up to 30 days.",
+        "more": "Try Azure for free"
+      },
+      {
+        "cardTitle": "Connect with a sales specialist",
+        "cardPara": "Chat with or call a sales specialist for personalized guidance.",
+        "more": "Get in touch"
+      },
+      {
+        "cardTitle": "New to Azure? Learn at your own pace",
+        "cardPara": "Learn cloud computing basics with self-paced modules on Microsoft Learn.",
+        "more": "Get Started"
+      }
+    ]
+  },
+  "footer": {
+    "footerResource": [
+      [
+        "Explore Azure",
+        "What is Azure?",
+        "Get started with Azure",
+        "Global infrastructure",
+        "Datacenter regions",
+        "Trust your cloud",
+        "Azure Essentials",
+        "Customer stories"
+      ],
+      [
+        "Products and pricing",
+        "Products",
+        "Azure pricing",
+        "Free Azure services",
+        "Flexible purchase options",
+        "FinOps on Azure",
+        "Optimize your costs"
+      ],
+      [
+        "Solutions and support",
+        "Solutions",
+        "Resources for accelerating growth",
+        "Solution architectures",
+        "Support",
+        "Azure demo and live Q&A"
+      ],
+      ["Partners", "Auzre Marketplace", "Find a partner", "Join ISV Success"],
+      [
+        "Resources",
+        "Training and certifications",
+        "Documentation",
+        "Blog",
+        "Developer resources",
+        "Students",
+        "Events and Webinars",
+        "Analyst reports, white papers, and e-books",
+        "Videos"
+      ],
+      [
+        "Cloud computing",
+        "What is cloud computing?",
+        "What is cloud migration?",
+        "What is a hybrid cloud?",
+        "What is AI?",
+        "What is PaaS?",
+        "What is IaaS?",
+        "What is SaaS?",
+        "What is DevOps?"
+      ]
+    ],
+    "footer2": {
+      "globeIcon": "assets/icons/earth.png",
+      "lang": "English (United Kingdom",
+      "privacyIcon": "assets/icons/privacy-icon.svg",
+      "privacyText": "Your Privacy Choices",
+      "consumer": "Consumer Health Privacy",
+      "footerList": [
+        "Contact Micrsoft",
+        "Privacy",
+        "Terms of use",
+        "Trademarks",
+        "About our ads",
+        "EU Compliance",
+        "Regulatory reporting",
+        "© Microsoft 2024"
+      ]
     }
   }
 }

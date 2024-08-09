@@ -8,17 +8,15 @@ import solutionsSection from './solutionsSection.js';
 import productsSection from './productsSection.js';
 import resourcesSection from './resourcesSection.js';
 import customerSection from './customerSection.js';
-
-let data;
-
-function controller() {}
+import nextStepSection from './nextStepSection.js';
+import footerSection from './footerSection.js';
 
 async function init() {
   try {
     const res = await fetch(`data.json`);
 
     if (!res.ok) throw new Error(err);
-    data = await res.json();
+    const data = await res.json();
 
     // Function calls
     navbarElements.navBar(data.nav);
@@ -29,7 +27,9 @@ async function init() {
     productsSection.render(data.sections.products);
     resourcesSection.render(data.sections.resources);
     customerSection.render(data.sections.customer);
-    // console.log();
+    nextStepSection.render(data.nextStep);
+    footerSection.render(data.footer);
+    // console.log(data.footer);
 
     // Object.keys(data.sections).forEach((key) => {
     //   // console.log(key, '..', data.sections[key].id);
@@ -42,6 +42,5 @@ async function init() {
 
 // INITIAL CALL
 init();
-controller();
 
 // JS-> 263 | JSON-> 242 || till 05/08/2024
