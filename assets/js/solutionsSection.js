@@ -92,7 +92,8 @@ class Solutions {
           open = true;
         } else open = false;
 
-        // prev variable is used to check the current active tabItem and to close if it is selected twice
+        // prev variable is used to check the current
+        //active tabItem and to close if it is selected twice
         prev = idx;
       });
     });
