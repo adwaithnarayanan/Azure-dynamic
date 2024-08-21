@@ -77,8 +77,6 @@ class Solutions {
     });
 
     const liEls = this._solutionsTabItems.querySelectorAll('li');
-    let prev = 0;
-    let open = false;
     liEls.forEach((liItem, idx) => {
       liItem.addEventListener('click', () => {
         this._removeActiveTabItem(liEls);
@@ -86,15 +84,6 @@ class Solutions {
         this._showTabImg(items.tabItems[idx].media);
 
         liItem.classList.add('active-tab-item');
-
-        if (prev === idx && !open) {
-          this._removeActiveTabItem(liEls);
-          open = true;
-        } else open = false;
-
-        // prev variable is used to check the current
-        //active tabItem and to close if it is selected twice
-        prev = idx;
       });
     });
   }

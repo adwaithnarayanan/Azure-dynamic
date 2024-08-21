@@ -2494,6 +2494,7 @@ div.customer-arrow.active {
     height: fit-content;
     padding-left: 3rem;
     border: none;
+    cursor: pointer;
   }
 
   li.active-tab-item {
